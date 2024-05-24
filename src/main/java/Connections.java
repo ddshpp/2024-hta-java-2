@@ -1,4 +1,4 @@
-import Config.Config;
+import ConfigTest.ConfigTest;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -10,8 +10,8 @@ public class Connections {
 
     public static Statement startConnection() throws SQLException {
         try {
-            Class.forName(Config.DRIVER.getValue());
-            connection = DriverManager.getConnection(Config.URL.getValue(), Config.USER.getValue(), Config.PASSWORD.getValue());
+            Class.forName(ConfigTest.DRIVER.getValue());
+            connection = DriverManager.getConnection(ConfigTest.URL.getValue(), ConfigTest.USER.getValue(), ConfigTest.PASSWORD.getValue());
             System.out.println("연결 성공");
         } catch (Exception e) {
             throw new RuntimeException("연결 안됐어요!!!!!!!!!!!!!");
