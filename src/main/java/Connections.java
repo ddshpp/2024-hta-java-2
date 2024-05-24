@@ -7,7 +7,7 @@ public class Connections {
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost/hta";
     private static final String USER = "root";
-    private static final String PASSWORD = "!ajdajddl123";
+    private static final String PASSWORD = "";
     public static Statement statement;
     public static Connection connection = null;
 
