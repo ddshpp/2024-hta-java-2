@@ -6,9 +6,6 @@ public class Application {
 //        Statements.updateName("테스트입력", 213);
 //        Statements.getEmp();
 //        Statements.close();
-
         Statements.getTable();
-
-
     }
 }

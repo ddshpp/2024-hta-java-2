@@ -23,7 +23,7 @@ public class Statements {
                 String columnName = columns.getString("COLUMN_NAME");
                 System.out.print(columnName + "\t");
             }
-            
+
             System.out.println(System.lineSeparator());
         }
     }
