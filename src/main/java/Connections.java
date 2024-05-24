@@ -9,7 +9,7 @@ public class Connections {
     public static Statement statement;
     public static Connection connection = null;
 
-    public static void databaseMetaDataTest() throws SQLException {
+    public static DatabaseMetaData databaseMetaDataTest() throws SQLException {
         try {
             Class.forName(ConfigTest.DRIVER.getValue());
             connection = DriverManager.getConnection(ConfigTest.URL.getValue(),
@@ -20,8 +20,7 @@ public class Connections {
             throw new RuntimeException("연결 안됐어요!!!!!!!!!!!!!");
         }
 
-        DatabaseMetaData databaseMetaData = connection.getMetaData();
-        System.out.println(databaseMetaData.getConnection());
+        return connection.getMetaData();
     }
 
     public static Statement startConnection() throws SQLException {

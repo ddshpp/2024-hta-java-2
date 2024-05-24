@@ -1,3 +1,4 @@
+import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -9,8 +10,22 @@ public class Statements {
         statement = Connections.startConnection();
     }
 
-    public static void databaseMetaDataTest() throws SQLException {
-        Connections.databaseMetaDataTest();
+    public static void getTable() throws SQLException {
+        DatabaseMetaData databaseMetaData = Connections.databaseMetaDataTest();
+        ResultSet resultSet = databaseMetaData.getTables(null, null, null, new String[]{"TABLE"});
+
+        while (resultSet.next()) {
+            String tableName = resultSet.getString("TABLE_NAME");
+            System.out.println("<" + tableName + ">");
+
+            ResultSet columns = databaseMetaData.getColumns(null, null, tableName, null);
+            while (columns.next()) {
+                String columnName = columns.getString("COLUMN_NAME");
+                System.out.print(columnName + "\t");
+            }
+            
+            System.out.println(System.lineSeparator());
+        }
     }
 
     public static void updateName(String name, int id) throws SQLException {

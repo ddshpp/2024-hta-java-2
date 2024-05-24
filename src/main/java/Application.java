@@ -7,6 +7,8 @@ public class Application {
 //        Statements.getEmp();
 //        Statements.close();
 
-        Statements.databaseMetaDataTest();
+        Statements.getTable();
+
+
     }
 }
