@@ -11,7 +11,8 @@ public class Connections {
     public static Statement startConnection() throws SQLException {
         try {
             Class.forName(ConfigTest.DRIVER.getValue());
-            connection = DriverManager.getConnection(ConfigTest.URL.getValue(), ConfigTest.USER.getValue(), ConfigTest.PASSWORD.getValue());
+            connection = DriverManager.getConnection(ConfigTest.URL.getValue(),
+                    ConfigTest.USER.getValue(), ConfigTest.PASSWORD.getValue());
             System.out.println("연결 성공");
         } catch (Exception e) {
             throw new RuntimeException("연결 안됐어요!!!!!!!!!!!!!");
