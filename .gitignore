@@ -12,7 +12,7 @@ build/
 *.iws
 *.iml
 *.ipr
-/src/main/java/Config
+.Config/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
