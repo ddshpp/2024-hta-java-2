@@ -9,6 +9,10 @@ public class Statements {
         statement = Connections.startConnection();
     }
 
+    public static void databaseMetaDataTest() throws SQLException {
+        Connections.databaseMetaDataTest();
+    }
+
     public static void updateName(String name, int id) throws SQLException {
         String sql = "update emp set ename= \" " + name + "\" where id= \"" + id + "\"";
         System.out.println(statement.executeUpdate(sql));
