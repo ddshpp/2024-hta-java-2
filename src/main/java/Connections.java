@@ -4,17 +4,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Connections {
-    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://localhost/hta";
-    private static final String USER = "root";
-    private static final String PASSWORD = "";
     public static Statement statement;
     public static Connection connection = null;
 
     public static Statement startConnection() throws SQLException {
         try {
-            Class.forName(DRIVER);
-            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            Class.forName(Config.DRIVER.getValue());
+            connection = DriverManager.getConnection(Config.URL.getValue(), Config.USER.getValue(), Config.PASSWORD.getValue());
             System.out.println("연결 성공");
         } catch (Exception e) {
             throw new RuntimeException("연결 안됐어요!!!!!!!!!!!!!");
