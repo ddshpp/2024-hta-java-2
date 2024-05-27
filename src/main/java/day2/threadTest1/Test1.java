@@ -1,4 +1,4 @@
-package day2.threadTest;
+package day2.threadTest1;
 
 public class Test1 {
     public  void printNumber() {

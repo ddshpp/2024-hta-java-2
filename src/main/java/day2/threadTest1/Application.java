@@ -1,4 +1,4 @@
-package day2.threadTest;
+package day2.threadTest1;
 
 public class Application {
     public static void main(String[] args) {
