@@ -1,6 +1,6 @@
 package day2.threadTest4;
 
-public class Application {
+public class Test1 {
     public static void main(String[] args) {
 
         Thread thread1 = new Thread(() -> {
