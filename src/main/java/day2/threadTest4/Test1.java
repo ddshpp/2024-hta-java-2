@@ -9,12 +9,9 @@ public class Test1 {
             }
         });
 
-        Thread thread2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i < 1000; i++) {
-                    System.out.println("우히히히 : " + i);
-                }
+        Thread thread2 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                System.out.println("우히히히 : " + i);
             }
         });
 
