@@ -12,6 +12,5 @@ public class Application {
 
         test1.interrupt();
         System.out.println("test1.isInterrupted() : " + test1.isInterrupted());
-
     }
 }
