@@ -1,7 +1,7 @@
 package day2.synchronizedTest;
 
 public class Client implements Runnable {
-    private Account account;
+    private final Account account;
 
     public Client(Account account) {
         this.account = account;

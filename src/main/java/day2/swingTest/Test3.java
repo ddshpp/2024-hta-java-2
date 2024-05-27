@@ -6,12 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Test3 extends JFrame {
-    private JPanel contentPane;
-
-    public static void main(String[] args) {
-        Test3 test3 = new Test3();
-        test3.setVisible(true);
-    }
+    private final JPanel contentPane;
 
     public Test3() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -21,7 +16,6 @@ public class Test3 extends JFrame {
 
         contentPane = new JPanel();
         contentPane.setBackground(Color.BLUE);
-
         contentPane.setLayout(null);
 
         JButton button1 = new JButton("Button 1");
@@ -34,6 +28,10 @@ public class Test3 extends JFrame {
         contentPane.add(button2);
 
         setContentPane(contentPane);
+    }
 
+    public static void main(String[] args) {
+        Test3 test3 = new Test3();
+        test3.setVisible(true);
     }
 }

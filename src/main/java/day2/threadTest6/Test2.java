@@ -1,6 +1,6 @@
 package day2.threadTest6;
 
-public class Test2 implements Runnable{
+public class Test2 implements Runnable {
 
     @Override
     public void run() {

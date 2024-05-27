@@ -10,8 +10,8 @@ public class Application {
         thread1.start();
         thread2.start();
 
-        try{
-            thread1.sleep(2000);
+        try {
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
