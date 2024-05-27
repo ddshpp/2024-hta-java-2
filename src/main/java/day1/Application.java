@@ -1,3 +1,5 @@
+package day1;
+
 import java.sql.SQLException;
 
 public class Application {
