@@ -12,7 +12,7 @@ public class SwingTest1 extends JFrame {
     private JPanel jPanel1 = new JPanel();
     private JButton button1 = new JButton();
     private JButton button2 = new JButton();
-    private final JLabel jLabel1 = new JLabel();
+    private JLabel jLabel1 = new JLabel();
     private JTextField textField1 = new JTextField();
 
     public SwingTest1() {
@@ -20,7 +20,6 @@ public class SwingTest1 extends JFrame {
         setTitle("SwingTest");
         setBounds(100, 100, 500, 500);
         setLocationRelativeTo(null);
-//        jPanel1.setBackground(Color.BLUE);
         jPanel1.setLayout(null);
 
         button1.setBounds(10, 10, 100, 30);
@@ -29,9 +28,6 @@ public class SwingTest1 extends JFrame {
         button2.setBounds(10, 50, 100, 30);
         button2.setText("Button2");
         jPanel1.add(button2);
-
-        // 3-6시 6-8시 8-9시  -> 4
-        // 3-5시 5-9 -> 4
 
         jLabel1.setText("Label1");
         jLabel1.setBounds(10, 100, 100, 30);
