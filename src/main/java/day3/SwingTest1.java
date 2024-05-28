@@ -12,9 +12,8 @@ public class SwingTest1 extends JFrame {
     private JPanel jPanel1 = new JPanel();
     private JButton button1 = new JButton();
     private JButton button2 = new JButton();
-    private JLabel jLabel1 = new JLabel();
+    private final JLabel jLabel1 = new JLabel();
     private JTextField textField1 = new JTextField();
-    ;
 
     public SwingTest1() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
