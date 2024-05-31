@@ -30,16 +30,9 @@ public class ColorChooserTest extends JFrame {
                     @Override
                     public void mouseClicked(MouseEvent e) {
                         Color color = colorChooser.getColor();
-                        JDialog dialog = JColorChooser.createDialog(null, "테스트입니다", true,
+                        JDialog dialog = JColorChooser.createDialog(null, "색상선택기!!!", true,
                                 colorChooser, null, null);
                         dialog.setVisible(true);
-
-                        if (color != null) {
-                            System.out.println(color.getRed());
-                            System.out.println(color.getGreen());
-                            System.out.println(color.getBlue());
-                        }
-                        System.out.println(color);
                     }
                 }
         );
