@@ -45,9 +45,17 @@ public class JFrame1 extends JFrame {
         jp3.add(buttonCancel);
 
         buttonOK.setMnemonic(KeyEvent.VK_O);
-//
+
 //        setModal(true);
 //        getRootPane().setDefaultButton(buttonOK);
+
+        /**
+         1. DB 구조잡고 맥미니,맥북 동기화
+         2. 기본적인 클래스 생성
+         3.
+
+
+         */
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -76,7 +84,6 @@ public class JFrame1 extends JFrame {
                                                }
                                            }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0),
                 JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
-
         setContentPane(jp1);
     }
 
