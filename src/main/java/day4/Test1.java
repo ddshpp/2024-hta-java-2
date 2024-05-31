@@ -4,9 +4,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
 
-public class Test1 extends JFrame{
+public class Test1 extends JFrame {
     private JPanel panel1;
     private JButton button1;
     private JButton button2;
