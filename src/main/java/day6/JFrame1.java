@@ -7,12 +7,11 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JButton;
 import javax.swing.JComponent;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
 
-public class Test1 extends JDialog {
+public class JFrame1 extends JFrame {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
@@ -20,32 +19,35 @@ public class Test1 extends JDialog {
     private JPanel jp2;
     private JPanel jp3;
 
-    public Test1() {
+    public JFrame1() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("tt111");
         setBounds(100, 100, 450, 300);
-        setContentPane(contentPane);
         setLocationRelativeTo(null);
-        jp1 = new JPanel();
-        jp1.setLayout(null);
-        jp2 = new JPanel();
-        jp2.setLayout(null);
-        jp1.add(jp2);
-        jp3 = new JPanel();
-        jp3.setLayout(null);
+        contentPane = new JPanel();
+        contentPane.setLayout(null);
 
+        jp1 = new JPanel();
+        contentPane.add(jp1);
+
+        jp2 = new JPanel();
+        contentPane.add(jp2);
+
+        jp3 = new JPanel();
         jp1.add(jp3);
-        jp3.add(buttonOK);
-        jp3.add(buttonCancel);
 
         buttonOK = new JButton("OK");
+        buttonOK.setBounds(20, 20, 20, 20);
+        jp3.add(buttonOK);
+
         buttonCancel = new JButton("Cancel");
+        buttonCancel.setBounds(40, 20, 20, 20);
+        jp3.add(buttonCancel);
 
         buttonOK.setMnemonic(KeyEvent.VK_O);
-
-
-        setModal(true);
-        getRootPane().setDefaultButton(buttonOK);
+//
+//        setModal(true);
+//        getRootPane().setDefaultButton(buttonOK);
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -74,6 +76,8 @@ public class Test1 extends JDialog {
                                                }
                                            }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0),
                 JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+
+        setContentPane(jp1);
     }
 
     private void onOK() {
