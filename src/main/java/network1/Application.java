@@ -1,12 +1,40 @@
 package network1;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
 
 public class Application {
     public static void main(String[] args) throws Exception {
 
-        getInfo();
+//        getInfo();
+//        printHTML1();
+        printHTML2();
+
+    }
+
+    private static void printHTML2() throws IOException {
+        URL url = new URL("https://www.naver.com/");
+
+        InputStreamReader inputStreamReader = new InputStreamReader(url.openStream());
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        String inputLine;
+        while ((inputLine = bufferedReader.readLine()) != null) {
+            System.out.println(inputLine);
+        }
+    }
+
+    private static void printHTML1() throws IOException {
+        URL url = new URL("https://www.naver.com/");
+        InputStream inputStream = url.openStream();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
     }
 
     private static void getInfo() throws IOException {
@@ -18,7 +46,6 @@ public class Application {
                 "url.getPort()" + url.getPort() + System.lineSeparator() +
                 "url.getFile()" + url.getFile() + System.lineSeparator() +
                 "url.getHost()" + url.getHost() + System.lineSeparator();
-
         System.out.println(result);
     }
 }
