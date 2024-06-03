@@ -12,7 +12,9 @@ public class Application {
 //        getInfo();
 //        printHTML1();
 //        printHTML2();
-        printHTML3();
+//        printHTML3();
+
+
     }
 
     private static void printHTML3() throws IOException {
