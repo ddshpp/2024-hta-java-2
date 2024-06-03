@@ -11,8 +11,29 @@ public class Application {
 
 //        getInfo();
 //        printHTML1();
-        printHTML2();
+//        printHTML2();
+        printHTML3();
+    }
 
+    private static void printHTML3() throws IOException {
+        URL url = new URL("https://news.daum.net/");
+
+        InputStreamReader inputStreamReader = new InputStreamReader(url.openStream());
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        String inputLine;
+        boolean flag = false;
+
+        while ((inputLine = bufferedReader.readLine()) != null) {
+            if(inputLine.contains(" class=\"link_txt\" data-tiara-layer=\"article_main\"")) {
+                flag = true;
+            }
+            if(inputLine.contains("</a>")) {
+                flag = false;
+            }
+            if(flag) {
+                System.out.println(bufferedReader.readLine().trim());
+            }
+        }
     }
 
     private static void printHTML2() throws IOException {
