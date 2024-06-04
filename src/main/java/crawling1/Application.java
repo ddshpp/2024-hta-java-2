@@ -1,4 +1,4 @@
-package crawling;
+package crawling1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,13 +8,10 @@ import java.net.URL;
 
 public class Application {
     public static void main(String[] args) throws Exception {
-
-//        getInfo();
-//        printHTML1();
-//        printHTML2();
-//        printHTML3();
-
-
+        getInfo();
+        printHTML1();
+        printHTML2();
+        printHTML3();
     }
 
     private static void printHTML3() throws IOException {
@@ -26,13 +23,13 @@ public class Application {
         boolean flag = false;
 
         while ((inputLine = bufferedReader.readLine()) != null) {
-            if(inputLine.contains(" class=\"link_txt\" data-tiara-layer=\"article_main\"")) {
+            if (inputLine.contains(" class=\"link_txt\" data-tiara-layer=\"article_main\"")) {
                 flag = true;
             }
-            if(inputLine.contains("</a>")) {
+            if (inputLine.contains("</a>")) {
                 flag = false;
             }
-            if(flag) {
+            if (flag) {
                 System.out.println(bufferedReader.readLine().trim());
             }
         }
