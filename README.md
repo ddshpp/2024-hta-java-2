@@ -26,5 +26,5 @@ JAVA 기초2
 > 6. GUI(swing)
 >   * 05/28 ~ 05/31 (4日)
 
-> 7. Network
+> 7. Crawling
 >   * 06/03 ~ 
