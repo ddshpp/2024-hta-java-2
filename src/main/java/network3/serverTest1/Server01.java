@@ -30,12 +30,12 @@ public class Server01 {
                     br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 
-                    String msg = br.readLine();
-                    System.out.println("msg : " + msg);
-
-                    bw.write(msg + "\n");
+                    bw.write("나는 서버다~~!!!!!!!" + "\n");
                     bw.flush();
                     System.out.println("전송 완료");
+
+                    String msg = br.readLine();
+                    System.out.println("클라 : " + msg);
 
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
@@ -50,7 +50,6 @@ public class Server01 {
                     }
                 }
             }
-
         } catch (IOException e) {
             System.out.println("[에러] : " + e.getMessage());
         } finally {
