@@ -7,8 +7,11 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class Server01 {
+    static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
 
         ServerSocket serverSocket = null;
@@ -21,21 +24,25 @@ public class Server01 {
             serverSocket = new ServerSocket(6789);
 //            serverSocket = new ServerSocket(7777);
 
+            String sendMessage = scanner.nextLine();
+            System.out.println("서버가 준비되었습니다.");
+
             //항시 대기 서버
-            while (true) {
+            while (sendMessage != null) {
                 try {
-                    System.out.println("서버가 준비되었습니다.");
                     socket = serverSocket.accept();
 
                     br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 
-                    bw.write("나는 서버다~~!!!!!!!" + "\n");
+                    bw.write(sendMessage + "\n");
                     bw.flush();
                     System.out.println("전송 완료");
 
                     String msg = br.readLine();
                     System.out.println("클라 : " + msg);
+
+                    sendMessage = scanner.nextLine();
 
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
