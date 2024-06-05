@@ -11,7 +11,6 @@ public class Server {
         try {
             serverSocket = new ServerSocket(8888);
             System.out.println("서버 준비됨요.");
-
             socket = serverSocket.accept();
 
             Sender sender = new Sender(socket);
@@ -19,7 +18,6 @@ public class Server {
 
             sender.start();
             receiver.start();
-
         } catch (Exception e) {
             throw new RuntimeException("error", e);
         }

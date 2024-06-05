@@ -10,6 +10,7 @@ public class Receiver extends Thread {
 
     public Receiver(Socket socket) {
         this.socket = socket;
+
         try {
             in = new DataInputStream(socket.getInputStream());
         } catch (IOException e) {

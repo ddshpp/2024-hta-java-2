@@ -12,6 +12,7 @@ public class Sender extends Thread {
 
     public Sender(Socket socket) {
         this.socket = socket;
+
         try {
             out = new DataOutputStream(socket.getOutputStream());
             name = "<" + socket.getInetAddress() + " : " + socket.getPort() + ">";
@@ -22,6 +23,7 @@ public class Sender extends Thread {
 
     public void run() {
         Scanner scanner = new Scanner(System.in);
+
         while (out != null) {
             try {
                 out.writeUTF(name + scanner.nextLine());
