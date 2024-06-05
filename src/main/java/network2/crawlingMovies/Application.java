@@ -1,4 +1,4 @@
-package crawling2.crawlingMovies;
+package network2.crawlingMovies;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

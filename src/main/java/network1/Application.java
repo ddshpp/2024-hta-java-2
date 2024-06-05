@@ -1,4 +1,4 @@
-package crawling1;
+package network1;
 
 import java.io.BufferedReader;
 import java.io.IOException;

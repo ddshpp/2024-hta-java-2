@@ -1,4 +1,4 @@
-package crawling2.jsonTest;
+package network2.printJsonFile;
 
 import java.io.FileReader;
 import java.io.IOException;
