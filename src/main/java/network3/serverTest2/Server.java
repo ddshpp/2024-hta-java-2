@@ -11,9 +11,8 @@ import java.util.List;
 
 public class Server {
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = null;
+        ServerSocket serverSocket;
         Socket socket;
-
         BufferedReader br;
         BufferedWriter bw;
 
