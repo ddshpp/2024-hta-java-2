@@ -8,19 +8,19 @@ import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Client01 {
+public class Client {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        Socket socket = null;
-        BufferedReader br = null;
-        BufferedWriter bw = null;
+        Socket socket;
+        BufferedReader br;
+        BufferedWriter bw;
 
         try {
             String sendMessage = scanner.nextLine();
 
             while (sendMessage != null) {
-                socket = new Socket("localhost", 6789);
+                socket = new Socket("localhost", 5678);
                 br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 
